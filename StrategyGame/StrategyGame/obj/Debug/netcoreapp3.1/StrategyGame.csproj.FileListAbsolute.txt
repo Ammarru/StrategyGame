@@ -1,0 +1,13 @@
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.exe
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.deps.json
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.runtimeconfig.json
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.runtimeconfig.dev.json
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.dll
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\bin\Debug\netcoreapp3.1\StrategyGame.pdb
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.csprojAssemblyReference.cache
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.AssemblyInfoInputs.cache
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.AssemblyInfo.cs
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.csproj.CoreCompileInputs.cache
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.dll
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.pdb
+D:\Projects\OOPInt-2020_Project_4\StrategyGame\StrategyGame\obj\Debug\netcoreapp3.1\StrategyGame.genruntimeconfig.cache
