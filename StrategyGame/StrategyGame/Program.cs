@@ -381,6 +381,7 @@ namespace StrategyGame
 					"\n“C” button – change ship name." +
 					"\n“W” button – Show Ship details." +
 					"\n“S” button – Skip Day." +
+					"\n“M” button – Manager Mode." +
 					"\n“ESC” button -Close shop!");
 				
 				
@@ -495,6 +496,10 @@ namespace StrategyGame
 							MainMenu(islands);
 							break;
 
+						case ConsoleKey.M:
+							Manager();
+							break;
+
 						case ConsoleKey.R:
 							Console.Clear();
 							if (user.colonies.Count < 1)
@@ -587,22 +592,229 @@ namespace StrategyGame
 			}
 			void Manager()
 			{
-				Console.WriteLine("1.Change default building.\n2.Change base capacity of production buildings\n3.Change cost of training workers\n4.Change cost of training soldiers\n5.Player Mode");
-				var Command = Convert.ToInt32(Console.ReadLine());
-				switch (Command)
+				Console.Clear();
+				var controller = false;
+				while (!controller)
 				{
-					case 1:
-						
-						break;
-					case 2:
-						break;
-					case 3:
-						break;
-					case 4:
-						break;
-					case 5:
-						MainMenu(islands);
-						break;
+					Console.WriteLine("1.Change default building.\n2.Change base capacity of production buildings\n3.Player Mode");
+					var Command = Convert.ToInt32(Console.ReadLine());
+					switch (Command)
+					{
+						case 1:
+							Console.Clear();
+							Console.WriteLine("choose Colony you want to change default buildings for:");
+							var n = 1;
+							foreach (var i in islands)
+							{
+								Console.WriteLine(n + ".");
+								i.Colony.ColonyInfo();
+								n++;
+							}
+							Command = Convert.ToInt32(Console.ReadLine());
+							switch (Command)
+							{
+								case 1:
+									Console.Clear();
+									Console.WriteLine("Which building would you like to change?\n1.Production Building\n2.Civilian Building\n3.MilitaryBuilding");
+									Command = Convert.ToInt32(Console.ReadLine());
+									switch (Command)
+									{
+										case 1:
+											Console.Clear();
+											islands[0].Colony.Buildings[0].Active = !(islands[1].Colony.Buildings[0].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 2:
+											Console.Clear();
+											islands[0].Colony.Buildings[1].Active = !(islands[1].Colony.Buildings[1].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 3:
+											Console.Clear();
+											islands[0].Colony.Buildings[2].Active = !(islands[1].Colony.Buildings[2].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+									}
+									break;
+								case 2:
+									Console.Clear();
+									Console.WriteLine("Which building would you like to change?\n1.Production Building\n2.Civilian Building\n3.MilitaryBuilding");
+									Command = Convert.ToInt32(Console.ReadLine());
+									switch (Command)
+									{
+										case 1:
+											Console.Clear();
+											islands[1].Colony.Buildings[0].Active = !(islands[1].Colony.Buildings[0].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 2:
+											Console.Clear();
+											islands[1].Colony.Buildings[1].Active = !(islands[1].Colony.Buildings[1].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 3:
+											Console.Clear();
+											islands[1].Colony.Buildings[2].Active = !(islands[1].Colony.Buildings[2].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+									}
+									break;
+								case 3:
+									Console.Clear();
+									Console.WriteLine("Which building would you like to change?\n1.Production Building\n2.Civilian Building\n3.MilitaryBuilding");
+									Command = Convert.ToInt32(Console.ReadLine());
+									switch (Command)
+									{
+										case 1:
+											Console.Clear();
+											islands[2].Colony.Buildings[0].Active = !(islands[2].Colony.Buildings[0].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 2:
+											Console.Clear();
+											islands[2].Colony.Buildings[1].Active = !(islands[2].Colony.Buildings[1].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 3:
+											Console.Clear();
+											islands[2].Colony.Buildings[2].Active = !(islands[2].Colony.Buildings[2].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+									}
+									break;
+								case 4:
+									Console.Clear();
+									Console.WriteLine("Which building would you like to change?\n1.Production Building\n2.Civilian Building\n3.MilitaryBuilding");
+									Command = Convert.ToInt32(Console.ReadLine());
+									switch (Command)
+									{
+										case 1:
+											Console.Clear();
+											islands[3].Colony.Buildings[0].Active = !(islands[3].Colony.Buildings[0].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 2:
+											Console.Clear();
+											islands[3].Colony.Buildings[1].Active = !(islands[3].Colony.Buildings[1].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+										case 3:
+											Console.Clear();
+											islands[3].Colony.Buildings[2].Active = !(islands[3].Colony.Buildings[2].Active);
+											Console.WriteLine("Building availability has been switched");
+											Console.WriteLine("Press any key to go back");
+											Console.ReadKey();
+											Manager();
+											break;
+									}
+									break;
+							}
+							break;
+						case 2:
+							Console.Clear();
+							Console.WriteLine("choose Colony you want to change production cpacityy for for:");
+							n = 1;
+							foreach (var i in islands)
+							{
+								Console.WriteLine(n + ".");
+								i.Colony.ColonyInfo();
+								n++;
+							}
+							Command = Convert.ToInt32(Console.ReadLine());
+							switch (Command)
+							{
+								case 1:
+									Console.Clear();
+									var productionBuilding = new ProductionBuilding();
+									productionBuilding = (ProductionBuilding)islands[0].Colony.Buildings[0];
+									Console.WriteLine("What capacity you want to set?");
+									var capacity = Convert.ToInt32(Console.ReadLine());
+									productionBuilding.Capacity = capacity;
+									islands[0].Colony.Buildings[0] = productionBuilding;
+									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine("Press any key to go back");
+									Console.ReadKey();
+									Manager();
+									break;
+								case 2:
+									Console.Clear();
+									productionBuilding = new ProductionBuilding();
+									productionBuilding = (ProductionBuilding)islands[1].Colony.Buildings[0];
+									Console.WriteLine("What capacity you want to set?");
+									capacity = Convert.ToInt32(Console.ReadLine());
+									productionBuilding.Capacity = capacity;
+									islands[1].Colony.Buildings[0] = productionBuilding;
+									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine("Press any key to go back");
+									Console.ReadKey();
+									Manager();
+									break;
+								case 3:
+									Console.Clear();
+									productionBuilding = new ProductionBuilding();
+									productionBuilding = (ProductionBuilding)islands[2].Colony.Buildings[0];
+									Console.WriteLine("What capacity you want to set?");
+									capacity = Convert.ToInt32(Console.ReadLine());
+									productionBuilding.Capacity = capacity;
+									islands[2].Colony.Buildings[1] = productionBuilding;
+									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine("Press any key to go back");
+									Console.ReadKey();
+									Manager();
+									break;
+								case 4:
+									Console.Clear();
+									productionBuilding = new ProductionBuilding();
+									productionBuilding = (ProductionBuilding)islands[3].Colony.Buildings[0];
+									Console.WriteLine("What capacity you want to set?");
+									capacity = Convert.ToInt32(Console.ReadLine());
+									productionBuilding.Capacity = capacity;
+									islands[3].Colony.Buildings[1] = productionBuilding;
+									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine("Press any key to go back");
+									Console.ReadKey();
+									Manager();
+									break;
+							}
+							break;
+						case 3:
+							MainMenu(islands);
+							break;
+
+					} 
 				}
 			}
 
