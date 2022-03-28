@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "P6pPbFMfrlG2cqUpik82/Z/hhSBAzoHQ0p2IZQSXnUluj0OTnaVXJRk6ndls4w6FwojxT/8N2gfP+6gSI9VW1Q==",
+  "dgSpecHash": "xQ95aYvqPgn3QGdmVQqBHXqQSnyJgqsyMYwHpj40Y86WV3OMUUcsRda9ZHYz7Y9oCxK9m/1HqOQOTsjwkL/qaQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\OOPInt-2020_Project_4\\StrategyGame\\StrategyGame\\StrategyGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\ammar\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
