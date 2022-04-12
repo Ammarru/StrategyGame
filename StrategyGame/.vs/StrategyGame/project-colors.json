@@ -5,7 +5,27 @@
       "ProjectGuid": "77765b02-438e-42cb-a266-57911ba21bfe",
       "DisplayName": "StrategyGame",
       "ColorIndex": 0
+    },
+    "cf0b2633-207f-4885-b30b-a17c1a73b10f": {
+      "ProjectGuid": "cf0b2633-207f-4885-b30b-a17c1a73b10f",
+      "DisplayName": "StrategyGame.Tests",
+      "ColorIndex": 1
+    },
+    "c47903ac-3428-40de-9f65-73fc53ae7cb4": {
+      "ProjectGuid": "c47903ac-3428-40de-9f65-73fc53ae7cb4",
+      "DisplayName": "StrategyGame.Tests",
+      "ColorIndex": 2
+    },
+    "c86abdaa-7aa8-4df2-9e77-ed378457173e": {
+      "ProjectGuid": "c86abdaa-7aa8-4df2-9e77-ed378457173e",
+      "DisplayName": "StrategyGame.Tests",
+      "ColorIndex": 3
+    },
+    "d773bc0c-d775-462b-90ba-ccce0327919a": {
+      "ProjectGuid": "d773bc0c-d775-462b-90ba-ccce0327919a",
+      "DisplayName": "StrategyGame.UnitTests",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 5
 }

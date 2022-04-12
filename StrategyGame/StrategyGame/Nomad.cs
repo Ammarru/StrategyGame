@@ -10,7 +10,7 @@ namespace StrategyGame
 		private uint FriendsipLevel=1;
 		public Resources Storage;
 		private decimal GrowthRate = 1.3m;
-		private bool Contracted = false;
+		public bool Contracted = false;
 		public Nomad(int number, Resources resources)
 		{
 			Number = number;

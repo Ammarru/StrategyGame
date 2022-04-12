@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
+[assembly: InternalsVisibleTo("StrategyGame.UnitTests")]
 namespace StrategyGame
 {
 	public abstract class Building
@@ -22,9 +24,10 @@ namespace StrategyGame
 		{
 		}
 
-		protected internal virtual void Build()
+		internal virtual void Build()
 		{
-			if (Warehouse.Storage.Food >= Cost.Food && Warehouse.Storage.Wood >= Cost.Wood && Warehouse.Storage.Stone >= Cost.Stone)
+			if (Warehouse.Storage.Food >= Cost.Food && Warehouse.Storage.Wood >= Cost.Wood 
+				&& Warehouse.Storage.Stone >= Cost.Stone)
 			{
 				Warehouse.Storage.Subtract(Cost);
 				Level = 1;
