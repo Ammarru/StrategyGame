@@ -7,7 +7,9 @@ namespace StrategyGame
 	public class MilitaryBuilding : Building
 	{
 		//public int capacity = 5;
-		public List<Soldier> soldiers = new List<Soldier>();
+
+		//public List<Soldier> soldiers = new List<Soldier>();
+		public int soldiers; 
 		protected string Name = "3. Military Building";
 		public MilitaryBuilding() { }
 		public MilitaryBuilding(Warehouse warehouse)
@@ -21,12 +23,12 @@ namespace StrategyGame
 		{
 			if ((NumOfCivilians * 10) <= Warehouse.Storage.Food)
 			{
-				if (soldiers.Count+NumOfCivilians <= this.capacity)
+				if (soldiers+NumOfCivilians <= this.capacity)
 				{
 					Warehouse.Storage.Subtract(new Resources(NumOfCivilians * 10, 0, 0));
 					for (int i = 1; i <= NumOfCivilians; i++)
 					{
-						soldiers.Add(new Soldier());
+						soldiers++;
 					}
 					var color = Console.ForegroundColor;
 					Console.ForegroundColor = ConsoleColor.Green;

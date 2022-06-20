@@ -56,7 +56,7 @@ namespace StrategyGame
 				{
 					var j = new MilitaryBuilding();
 					j = (MilitaryBuilding)i;
-					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers.Count}");
+					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers}");
 				}
 			}
 		}
@@ -80,7 +80,7 @@ namespace StrategyGame
 				{
 					var j = new MilitaryBuilding();
 					j = (MilitaryBuilding)i;
-					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers.Count}, capacity: {j.capacity}");
+					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers}, capacity: {j.capacity}");
 				}
 			}
 		}
@@ -112,7 +112,7 @@ namespace StrategyGame
 
 			var i = new MilitaryBuilding();
 			i = (MilitaryBuilding)Buildings[2];
-			return i.soldiers.Count;
+			return i.soldiers;
 
 		}
 		public void ChangeName(string name)

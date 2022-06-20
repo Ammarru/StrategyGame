@@ -80,7 +80,7 @@ namespace StrategyGame
 					Storage.ShowResources();
 					var militaryBuilding = new MilitaryBuilding();
 					militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
-					militaryBuilding.soldiers.RemoveRange(0, Number);
+					militaryBuilding.soldiers-=Number;
 					Number = 0;
 					Console.ForegroundColor = ConsoleColor.Red;
 					Console.WriteLine($"CASUALTIES\nYou lost {Number} Soldiers.\nThe Nomads Lost all their soldiers");
@@ -101,7 +101,7 @@ namespace StrategyGame
 						Storage.ShowResources();
 						var militaryBuilding = new MilitaryBuilding();
 						militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
-						militaryBuilding.soldiers.RemoveRange(0, soldiers);
+						militaryBuilding.soldiers-=soldiers;
 						Number = 0;
 						Console.ForegroundColor = color;
 						FriendsipLevel++;
@@ -114,7 +114,7 @@ namespace StrategyGame
 						Console.WriteLine($"CASUALTIES\nYou lost all your Soldiers, and so did the Nomads");
 						var militaryBuilding = new MilitaryBuilding();
 						militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
-						militaryBuilding.soldiers.RemoveRange(0, soldiers);
+						militaryBuilding.soldiers-= soldiers;
 						Number = 0;
 						Console.ForegroundColor = color;
 						FriendsipLevel--;
@@ -128,7 +128,7 @@ namespace StrategyGame
 					Console.WriteLine($"CASUALTIES\nYou lost all your Soldiers.\nThe Nomads lost {soldiers} soldiers. better luck next time.");
 					var militaryBuilding = new MilitaryBuilding();
 					militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
-					militaryBuilding.soldiers.RemoveRange(0, soldiers);
+					militaryBuilding.soldiers -= soldiers;
 					Number -= soldiers;
 					Console.ForegroundColor = color;
 					FriendsipLevel--;
