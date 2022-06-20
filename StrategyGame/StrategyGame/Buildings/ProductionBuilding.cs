@@ -7,7 +7,7 @@ namespace StrategyGame
 	public class ProductionBuilding : Building
 	{
 		public Resources Storage = new Resources();
-		public int Capacity;
+		//public int capacity;
 		protected string Name = "1. Production Building";
 
 		public ProductionBuilding()
@@ -17,8 +17,8 @@ namespace StrategyGame
 
 		public ProductionBuilding(Warehouse warehouse)
 		{
-			Capacity = 40;
-			Storage = new Resources(Capacity, Capacity, Capacity);
+			this.capacity = 40;
+			Storage = new Resources(this.capacity, this.capacity, this.capacity);
 			UpgradeMultiplier = 1.5m;
 			Warehouse = warehouse;
 			Cost = new Resources(2, 2, 2);
@@ -31,10 +31,10 @@ namespace StrategyGame
 				Warehouse.Storage.Subtract(Cost);
 				Level++;
 				Cost.increament(UpgradeMultiplier * Level);
-				Capacity = (int)(Capacity * UpgradeMultiplier);
+				this.capacity = (int)(this.capacity * UpgradeMultiplier);
 				var color = Console.ForegroundColor;
 				Console.ForegroundColor = ConsoleColor.Green;
-				Console.WriteLine("Upgrade succesfull to level: " + Level + "\n New Capacity: " + Capacity + ", Cost to upgrade to level " + Level + 1 + " equals :");
+				Console.WriteLine("Upgrade succesfull to level: " + Level + "\n New capacity: " + this.capacity + ", Cost to upgrade to level " + Level + 1 + " equals :");
 				Cost.ShowResources();
 				Console.ForegroundColor = color;
 			}

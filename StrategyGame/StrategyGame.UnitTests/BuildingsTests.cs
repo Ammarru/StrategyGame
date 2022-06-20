@@ -84,7 +84,9 @@ namespace StrategyGame.UnitTests
 
 			warehouse.Add(new Resources(1000, 0, 0));
 
-			building.train(20); //no capacity case 
+			building.train(20); //no
+								//
+								//case 
 
 			//Assert 
 			Assert.Equal(expected, building.workers.Count);

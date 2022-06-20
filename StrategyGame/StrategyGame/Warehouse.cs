@@ -7,7 +7,7 @@ namespace StrategyGame
 	public class Warehouse 
 	{
 		public Resources Storage = new Resources();
-		private int Capacity = 200;
+		//private int capacity = 200;
 		private int Level = 1;
 		private decimal UpgradeMultiplier = 2.0m;
 		private bool Active = false;

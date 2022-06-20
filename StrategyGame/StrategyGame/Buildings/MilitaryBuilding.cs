@@ -6,12 +6,13 @@ namespace StrategyGame
 {
 	public class MilitaryBuilding : Building
 	{
-		public int Capacity = 5;
+		//public int capacity = 5;
 		public List<Soldier> soldiers = new List<Soldier>();
 		protected string Name = "3. Military Building";
 		public MilitaryBuilding() { }
 		public MilitaryBuilding(Warehouse warehouse)
 		{
+			this.capacity = 5;
 			Warehouse = warehouse;
 			UpgradeMultiplier = 2.0m;
 			Cost = new Resources(5, 5, 5);
@@ -20,7 +21,7 @@ namespace StrategyGame
 		{
 			if ((NumOfCivilians * 10) <= Warehouse.Storage.Food)
 			{
-				if (soldiers.Count+NumOfCivilians <= Capacity)
+				if (soldiers.Count+NumOfCivilians <= this.capacity)
 				{
 					Warehouse.Storage.Subtract(new Resources(NumOfCivilians * 10, 0, 0));
 					for (int i = 1; i <= NumOfCivilians; i++)
@@ -37,7 +38,7 @@ namespace StrategyGame
 				{
 					var color = Console.ForegroundColor;
 					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine($"Building's maximum capacity is {Capacity}, please upgrade for more capacity");
+					Console.WriteLine($"Building's maximum capacity is {this.capacity}, please upgrade for more capacity");
 					Console.ForegroundColor = color;
 					return false;
 				}
@@ -58,10 +59,10 @@ namespace StrategyGame
 				Warehouse.Storage.Subtract(Cost);
 				Level++;
 				Cost.increament(UpgradeMultiplier * Level);
-				Capacity = (int)(Capacity * UpgradeMultiplier);
+				this.capacity = (int)(this.capacity * UpgradeMultiplier);
 				var color = Console.ForegroundColor;
 				Console.ForegroundColor = ConsoleColor.Green;
-				Console.WriteLine("Upgrade succesfull to level: " + Level + "\n New Capacity: " + Capacity + ", Cost to upgrade to level " + Level + 1 + " equals :");
+				Console.WriteLine("Upgrade succesfull to level: " + Level + "\n New capacity: " + this.capacity + ", Cost to upgrade to level " + Level + 1 + " equals :");
 				Cost.ShowResources();
 				Console.ForegroundColor = color;
 			}

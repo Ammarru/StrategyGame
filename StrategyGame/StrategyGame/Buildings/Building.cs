@@ -12,6 +12,7 @@ namespace StrategyGame
 		protected decimal UpgradeMultiplier;
 		protected Resources Cost;
 		protected Warehouse Warehouse;
+		public int capacity;
 		
 		public bool Active = false;
 

@@ -68,19 +68,19 @@ namespace StrategyGame
 				{
 					var j = new ProductionBuilding();
 					j = (ProductionBuilding)i;
-					Console.WriteLine($"- Production Building, level : {i.Level}, Capacity: {j.Capacity}");
+					Console.WriteLine($"- Production Building, level : {i.Level}, capacity: {j.capacity}");
 				}
 				else if (i is CivilianBuilding && i.Active)
 				{
 					var j = new CivilianBuilding();
 					j = (CivilianBuilding)i;
-					Console.WriteLine($"- Civilian Building, level : {i.Level}, Number of Civilians: {j.workers.Count}, Capacity: {j.Capacity}");
+					Console.WriteLine($"- Civilian Building, level : {i.Level}, Number of Civilians: {j.workers.Count}, capacity: {j.capacity}");
 				}
 				else if (i is MilitaryBuilding && i.Active)
 				{
 					var j = new MilitaryBuilding();
 					j = (MilitaryBuilding)i;
-					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers.Count}, Capacity: {j.Capacity}");
+					Console.WriteLine($"- Military Building, level : {i.Level}, Number of Soldiers: {j.soldiers.Count}, capacity: {j.capacity}");
 				}
 			}
 		}

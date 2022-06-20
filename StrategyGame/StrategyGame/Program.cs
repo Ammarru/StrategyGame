@@ -762,9 +762,9 @@ namespace StrategyGame
 									productionBuilding = (ProductionBuilding)islands[0].Colony.Buildings[0];
 									Console.WriteLine("What capacity you want to set?");
 									var capacity = Convert.ToInt32(Console.ReadLine());
-									productionBuilding.Capacity = capacity;
+									productionBuilding.capacity = capacity;
 									islands[0].Colony.Buildings[0] = productionBuilding;
-									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine($"capacity has been set to {capacity}");
 									Console.WriteLine("Press any key to go back");
 									Console.ReadKey();
 									Manager();
@@ -775,9 +775,9 @@ namespace StrategyGame
 									productionBuilding = (ProductionBuilding)islands[1].Colony.Buildings[0];
 									Console.WriteLine("What capacity you want to set?");
 									capacity = Convert.ToInt32(Console.ReadLine());
-									productionBuilding.Capacity = capacity;
+									productionBuilding.capacity = capacity;
 									islands[1].Colony.Buildings[0] = productionBuilding;
-									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine($"capacity has been set to {capacity}");
 									Console.WriteLine("Press any key to go back");
 									Console.ReadKey();
 									Manager();
@@ -788,9 +788,9 @@ namespace StrategyGame
 									productionBuilding = (ProductionBuilding)islands[2].Colony.Buildings[0];
 									Console.WriteLine("What capacity you want to set?");
 									capacity = Convert.ToInt32(Console.ReadLine());
-									productionBuilding.Capacity = capacity;
+									productionBuilding.capacity = capacity;
 									islands[2].Colony.Buildings[1] = productionBuilding;
-									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine($"capacity has been set to {capacity}");
 									Console.WriteLine("Press any key to go back");
 									Console.ReadKey();
 									Manager();
@@ -801,9 +801,9 @@ namespace StrategyGame
 									productionBuilding = (ProductionBuilding)islands[3].Colony.Buildings[0];
 									Console.WriteLine("What capacity you want to set?");
 									capacity = Convert.ToInt32(Console.ReadLine());
-									productionBuilding.Capacity = capacity;
+									productionBuilding.capacity = capacity;
 									islands[3].Colony.Buildings[1] = productionBuilding;
-									Console.WriteLine($"Capacity has been set to {capacity}");
+									Console.WriteLine($"capacity has been set to {capacity}");
 									Console.WriteLine("Press any key to go back");
 									Console.ReadKey();
 									Manager();
