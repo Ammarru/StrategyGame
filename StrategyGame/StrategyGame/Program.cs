@@ -50,7 +50,7 @@ namespace StrategyGame
 					case 1:
 						Console.Clear();
 						var counter = 0;
-						foreach (var i in user.ActiveColony.Buildings)
+						foreach (var i in user.ListOfBuildings())
 						{
 							if (i.Active==false)
 							{
@@ -61,7 +61,7 @@ namespace StrategyGame
 						if (counter > 0)
 						{
 							
-							foreach (var i in user.ActiveColony.Buildings)
+							foreach (var i in user.ListOfBuildings())
 							{
 								
 								if (i.Active == false)
@@ -92,7 +92,7 @@ namespace StrategyGame
 									{
 										if (user.ActiveColony.HasCivilianBuilding())
 										{
-											user.ActiveColony.Buildings[0].Build();
+											user.ListOfBuildings()[0].Build();
 											wait();
 										}
 										else
@@ -116,7 +116,7 @@ namespace StrategyGame
 								case 2:
 									if (user.ActiveColony.HasCivilianBuilding()==false)
 									{
-										user.ActiveColony.Buildings[1].Build();
+										user.ListOfBuildings()[1].Build();
 										wait();
 									}
 									else
@@ -133,7 +133,7 @@ namespace StrategyGame
 									{
 										if (user.ActiveColony.HasCivilianBuilding())
 										{
-											user.ActiveColony.Buildings[2].Build();
+											user.ListOfBuildings()[2].Build();
 											wait();
 										}
 										else
@@ -170,7 +170,7 @@ namespace StrategyGame
 					case 2:
 						Console.Clear();
 						counter = 0;
-						foreach (var i in user.ActiveColony.Buildings)
+						foreach (var i in user.ListOfBuildings())
 						{
 							if (i.Active)
 							{
@@ -181,7 +181,7 @@ namespace StrategyGame
 						if (counter > 0)
 						{
 							
-							foreach (var i in user.ActiveColony.Buildings)
+							foreach (var i in user.ListOfBuildings())
 							{
 								if (i.Active)
 								{
@@ -204,19 +204,19 @@ namespace StrategyGame
 							switch (key)
 							{
 								case 1:
-									user.ActiveColony.Buildings[0].Upgrade();
+									user.ListOfBuildings()[0].Upgrade();
 									Console.WriteLine("Press any Key to go to menu");
 									Console.ReadKey();
 									ColonyMenu(user);
 									break;
 								case 2:
-									user.ActiveColony.Buildings[1].Upgrade();
+									user.ListOfBuildings()[1].Upgrade();
 									Console.WriteLine("Press any Key to go to menu");
 									Console.ReadKey();
 									ColonyMenu(user);
 									break;
 								case 3:
-									user.ActiveColony.Buildings[2].Upgrade();
+									user.ListOfBuildings()[2].Upgrade();
 									Console.WriteLine("Press any Key to go to menu");
 									Console.ReadKey();
 									ColonyMenu(user);
@@ -248,7 +248,7 @@ namespace StrategyGame
 							Console.WriteLine("How many workers would you like to train?");
 							var number = Convert.ToInt32(Console.ReadLine());
 							var cast = new CivilianBuilding();
-							cast = (CivilianBuilding)user.ActiveColony.Buildings[1];
+							cast = (CivilianBuilding)user.ListOfBuildings()[1];
 							cast.train(number);
 							wait();
 						}
@@ -268,11 +268,11 @@ namespace StrategyGame
 							Console.WriteLine("How many soldiers would you like to train?");
 							var number = Convert.ToInt32(Console.ReadLine());
 							var civilianBuilding = new CivilianBuilding();
-							civilianBuilding = (CivilianBuilding)user.ActiveColony.Buildings[1];
+							civilianBuilding = (CivilianBuilding)user.ListOfBuildings()[1];
 							if (number<= civilianBuilding.workers.Count)
 							{
 								var militaryBuilding = new MilitaryBuilding();
-								militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
+								militaryBuilding = (MilitaryBuilding)user.ListOfBuildings()[2];
 								if (militaryBuilding.train(number))
 								{
 									civilianBuilding.workers.RemoveRange(0, number);

@@ -79,7 +79,7 @@ namespace StrategyGame
 					Console.WriteLine("You've Looted: ");
 					Storage.ShowResources();
 					var militaryBuilding = new MilitaryBuilding();
-					militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
+					militaryBuilding = (MilitaryBuilding)user.ListOfBuildings()[2];
 					militaryBuilding.soldiers-=Number;
 					Number = 0;
 					Console.ForegroundColor = ConsoleColor.Red;
@@ -100,7 +100,7 @@ namespace StrategyGame
 						Console.WriteLine("You've Looted: ");
 						Storage.ShowResources();
 						var militaryBuilding = new MilitaryBuilding();
-						militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
+						militaryBuilding = (MilitaryBuilding)user.ListOfBuildings()[2];
 						militaryBuilding.soldiers-=soldiers;
 						Number = 0;
 						Console.ForegroundColor = color;
@@ -113,7 +113,7 @@ namespace StrategyGame
 						Console.WriteLine("You Lost.");
 						Console.WriteLine($"CASUALTIES\nYou lost all your Soldiers, and so did the Nomads");
 						var militaryBuilding = new MilitaryBuilding();
-						militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
+						militaryBuilding = (MilitaryBuilding)user.ListOfBuildings()[2];
 						militaryBuilding.soldiers-= soldiers;
 						Number = 0;
 						Console.ForegroundColor = color;
@@ -127,7 +127,7 @@ namespace StrategyGame
 					Console.WriteLine("You Lost.");
 					Console.WriteLine($"CASUALTIES\nYou lost all your Soldiers.\nThe Nomads lost {soldiers} soldiers. better luck next time.");
 					var militaryBuilding = new MilitaryBuilding();
-					militaryBuilding = (MilitaryBuilding)user.ActiveColony.Buildings[2];
+					militaryBuilding = (MilitaryBuilding)user.ListOfBuildings()[2];
 					militaryBuilding.soldiers -= soldiers;
 					Number -= soldiers;
 					Console.ForegroundColor = color;

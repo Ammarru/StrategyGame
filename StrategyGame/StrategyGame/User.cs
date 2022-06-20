@@ -27,5 +27,10 @@ namespace StrategyGame
 		{
 			Ship = ship;
 		}
+		
+		public List<Building> ListOfBuildings()
+		{
+			return this.ActiveColony.Buildings;
+		}
 	}
 }
